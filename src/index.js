@@ -18,6 +18,7 @@ function getWeatherData(response) {
 
 }   
 
+
 function formatDate(date) {
     let minutes = date.getMinutes();
     let hours = date.getHours();
@@ -28,10 +29,22 @@ function formatDate(date) {
     }
     return `${day} ${hours}:${minutes}`;
     }
+
 function fetchWeatherData(city) {
     let apiKey = "5f0e384aoacc74261536bb0t2474bbf6";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(getWeatherData);
+}
+
+function getForecastData(response) {
+    let forecastHtml = '';
+    response.data.daily.forEach(function (forecast, index) {
+        if (index < 3) {
+        forecastHtml = forecastHtml + `
+        <div class="forecast-day">
+        
+        }
+    }
 }
 
 function searchFormSubmit(event) {
