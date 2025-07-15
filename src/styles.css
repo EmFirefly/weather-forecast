@@ -1,0 +1,137 @@
+body {
+font-family: Arial, sans-serif;
+background-color: #FBFBFB;
+}
+
+main {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+header {
+    background-color: #FBFBFB;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+h1 {
+    font-size: 30px;
+    color: #000000;
+}
+
+a {
+    color: #B33791;
+    text-decoration: none;
+}
+
+.city-main {
+    font-size: 40px;
+    line-height: 48px;
+
+}
+.weather-info {
+    color: #000000;
+    font-size: 15px;
+    font-weight: 350;
+    line-height: 20px;
+    position: absolute;
+    top: 210px;
+    padding-top: 18px;
+}
+
+.weather-box {
+    padding: 30px;
+    margin: 45px auto;
+    border-radius: 20px;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(65, 50, 100, 0.75);
+}
+.forecast-3-day {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+#forecast-day-1{
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #FEC5F6;
+    max-width: 100px;
+}
+#forecast-day-2{
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #FEC5F6;
+    max-width: 100px;
+}
+#forecast-day-3{
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #FEC5F6;
+    max-width: 100px;
+}
+#forecast-day-1 .day {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+}
+.temperature {
+    display: flex;
+    font-size: 42px;
+}
+
+#icon {
+    position: relative;
+    top: -24px;
+    left: 202px;
+    width: 55px;
+    margin-right: 10px;
+}
+
+.current-temperature {
+    position: relative;
+    top: -56px;
+    left: 400px;
+    font-size: 60px;
+    font-weight: bold ;
+}
+
+.celsius {
+    position: relative;
+    top: -46px;
+    right: -402px;
+    font-size: 30px;
+}
+
+.search-input {
+  background-color: #FEC5F6;
+  border: none;
+  color: rgba(39, 33, 66, 0.4);
+  font-size: 16px;
+  padding: 20px;
+  width: 75%;
+  border-radius: 6px;
+}
+
+.search-button {
+  background-color: #B33791;
+  border: none;
+  color: white;
+  font-size: 16px;
+  margin-left: 5px;
+  padding: 20px;
+  border-radius: 6px;
+  line-height: 1;
+}
+
+.weather-details {
+  justify-content: space-between;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #E0E0E0;
+}

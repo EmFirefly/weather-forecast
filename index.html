@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="stylesheet" href="src/styles.css" />
+     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <title>Weather Watch</title>
+  </head>
+  <body>
+    <div class="weather-box">
+    <header>
+      <form class="search-form" id="search-form">
+        <input type="text" placeholder="Enter city" class="search-input" id="search-input" />
+        <input type="submit" value="Search" class="search-button"/>
+      </form>
+    </header>
+    <main>
+    <div class="weather-details">
+        <h1 id="city-main"></h1>
+        <p class="weather-info">
+         <span id="date"></span>, <span id="weather-condition"></span>
+          <br />
+          Humidity: <span id="humidity"></span>%, Wind: <span id="windspeed"> </span>km/h
+        </p>
+      
+      <div class="temperature">
+        <p>
+          <div id="icon"></div>
+          <span class="current-temperature"></span>
+          <span class="celsius">°C</span>
+        </p>
+      </div>
+      <div class="forecast-3-day">
+        <div id="forecast-day-1">
+          <span class="day">Mon</span>
+          <span class="temp">16°</span>
+          <span class="condition">Sunny</span>
+        </div>
+        <div id="forecast-day-2">
+          <span class="day">Tue</span>
+          <span class="temp">18°</span>
+          <span class="condition">Cloudy</span>
+        </div>
+        <div id="forecast-day-3">
+          <span class="day">Wed</span>
+          <span class="temp">20°</span>
+          <span class="condition">Rainy</span>
+        </div>
+    </div>
+    </main>
+    <footer>
+      Coded by
+      <a href="https://github.com/EmFirefly" target="_blank">Megan van Zyl</a>
+      is open-sourced on 
+      <a href="#" target="_blank">Github</a>
+       and hosted on
+      <a href="#" target="_blank">Netlify</a>
+    </footer>
+  </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
