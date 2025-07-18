@@ -36,16 +36,6 @@ function fetchWeatherData(city) {
     axios.get(apiUrl).then(getWeatherData);
 }
 
-function getForecastData(response) {
-    let forecastHtml = '';
-    response.data.daily.forEach(function (forecast, index) {
-        if (index < 3) {
-        forecastHtml = forecastHtml + `
-        <div class="forecast-day">
-        
-        }
-    }
-}
 
 function searchFormSubmit(event) {
     event.preventDefault();

@@ -49,7 +49,7 @@ a {
     max-width: 600px;
     box-shadow: 0 4px 8px rgba(65, 50, 100, 0.75);
 }
-.forecast-3-day {
+.forecast-5-day {
     display: flex;
     justify-content: space-evenly;
     margin-top: 20px;
@@ -59,30 +59,40 @@ a {
     margin: 10px;
     border-radius: 10px;
     background-color: #FEC5F6;
-    max-width: 100px;
-    min-height: 90px;
+    min-height: 100px;
 }
 
 .day {
     font-size: 20px;
     font-weight: bold;
     color: #000000;
-    text-align: center;
+    position: relative;
+    left: 10px;
 }
 
-.temp {
-    font-size: 30px;
+.temp-high {
+    font-size: 20px;
     color: #000000;
     position: relative;
     top: 40px;
-    left: 15px;
+    left: 5px;
 }
+
+.temp-low {
+    font-size: 20px;
+    color: #808080;
+    position: relative;
+    top: 40px;
+    left: 5px;
+}
+
 
 .condition {
     font-size: 16px;
     color: #000000;
     position: relative;
-    top: 20px;
+    top: -24px;
+    left: 10px;
 }
 
 .temperature {
