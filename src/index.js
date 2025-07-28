@@ -1,3 +1,5 @@
+
+
 function getWeatherData(response) {
        let temperatureElement = document.querySelector('.current-temperature');
     let humidityElement = document.querySelector('#humidity');
@@ -30,6 +32,24 @@ function formatDate(date) {
     return `${day} ${hours}:${minutes}`;
     }
 
+    function displayForecast() {
+    let forecastElement = document.querySelector('#forecast');
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
+    let forecastHTML = "";
+    days.forEach(function(day) {
+       forecastHTML = forecastHTML + `  </div>
+          <div class="forecast-day">
+          <div class="day">${day}</div>
+          <div class="condition">🌧️</div>
+          <div class="temp-forecast">
+            <div class="temperatures"><strong>20°</strong></div>
+            <div class="temperatures">16°</div>
+          </div>
+        </div>`;
+    });
+    forecastElement.innerHTML = forecastHTML;
+    }
+
 function fetchWeatherData(city) {
     let apiKey = "5f0e384aoacc74261536bb0t2474bbf6";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
@@ -47,3 +67,4 @@ let searchFormElement = document.querySelector('#search-form');
 searchFormElement.addEventListener('submit', searchFormSubmit); 
 
 fetchWeatherData("Johannesburg");
+displayForecast();
