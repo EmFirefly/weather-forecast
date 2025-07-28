@@ -18,6 +18,7 @@ function getWeatherData(response) {
     windSpeedElement.innerHTML = Math.round(response.data.wind.speed);
     dateElement.innerHTML = formatDate(date);
 
+    getWeeklyForecast(response.data.city);
 }   
 
 
@@ -32,6 +33,11 @@ function formatDate(date) {
     return `${day} ${hours}:${minutes}`;
     }
 
+    function getWeeklyForecast(city) {
+        let apiKey = "5f0e384aoacc74261536bb0t2474bbf6";
+        let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+        axios.get(apiUrl).then(displayForecast);
+    }
     function displayForecast() {
     let forecastElement = document.querySelector('#forecast');
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
@@ -67,4 +73,3 @@ let searchFormElement = document.querySelector('#search-form');
 searchFormElement.addEventListener('submit', searchFormSubmit); 
 
 fetchWeatherData("Johannesburg");
-displayForecast();
