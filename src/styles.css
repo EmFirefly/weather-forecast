@@ -82,8 +82,9 @@ a {
     text-align: center;
 }
 
-.condition {
-    font-size: 30px;
+.weather-forecast-condition {
+    width: 70px;
+    height: 70px;
     padding: 0 10px;
     text-align: center;
 }
